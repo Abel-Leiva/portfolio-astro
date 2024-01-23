@@ -1,0 +1,44 @@
+---
+import Header from '../components/Header.astro';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header></Header>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		
+		
+	}
+	html {background-color: rgb(15, 23, 42);
+		scroll-behavior: smooth;
+		
+	}
+	
+	code {
+		
+	}
+	.div{height: 350px; background-color: rgba(32, 43, 71, 0.473);} 
+.glass{background:rgba(15, 23, 42, 0.404);backdrop-filter:blur(10px)}
+.scroll-margin {
+  scroll-margin-top: 50vh; /* Ajusta según sea necesario */
+}
+</style>
