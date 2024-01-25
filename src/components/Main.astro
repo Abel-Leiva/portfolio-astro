@@ -29,7 +29,7 @@ let pfList=[Js,React,Express,Node,Express,Postgres,Sequelize,Css,Bootstrap,Git,S
 let javaProjectList=[Java,MySql,Css,Servlet,Git]
 import Redux from "./SpanRedux.astro"  
 ---
-<main class="text-center flex items-center text-slate-100 flex-col">
+<main class="text-center flex items-center text-slate-100 flex-col w-full container ">
     <article class=" pb-7 scroll-margin-top" >
     
       <p class="text-lg max-w-[820px] tracking-wide " > 
@@ -43,11 +43,10 @@ import Redux from "./SpanRedux.astro"
       
           <section class="w-full text-lg mt-4 ">
             <h3 class="text-3xl">Habilidades Tecnicas</h3>
-            <div class="border-b-2 w-full h-14 text-left pl-2 pb-2 flex  items-end "><p ></p> Frontend: </p> <div class="flex  ml-2 gap-2">{listFront.map(Component=> <Component/>)}</div></div>
-            <div class="border-b-2 w-full max-h-auto min-h-14 text-left  pl-2 flex flex-row items-end pb-2 "> <p>Backend:</p><div class="flex flex-wrap  mt-2 ml-2 gap-2">{listBack.map(Component=>
-             <Component/>)}</div>  
-            </div>
-            <div class="border-b-2 w-full min-h-14 text-left pl-2 flex flex-row items-end pb-2 ">  <p>Otras:</p><div class="flex mb-1 gap-2 ml-2">{listOtros.map(Component=>
+            <div class="border-b-2 w-full max-h-auto mt-2  md:text-left pb-2 flex flex-col md:flex-row justify-center items-center"><p class=""> Frontend: </p> <div class="flex ml-2 gap-2 flex-wrap  w-full">{listFront.map(Component=> <Component/>)}</div ></div>
+            <div class="border-b-2 w-full max-h-auto min-h-14 text-center  md:text-left  mt-2 flex-col md:flex-row items-end pb-2 "><p class="  "> Backend:</p> <div class="flex flex-wrap  mt-2 w-full ml-2 gap-2">{listBack.map(Component=>
+            <Component/>)}</div></div>
+            <div class="border-b-2 w-full min-h-14 text-center  md:text-left flex flex-col md:flex-row items-center pb-2 ">  <p class="">Otras:</p><div class="flex mb-1 flex-wrap w-full gap-2 ml-2 ">{listOtros.map(Component=>
               <Component/>)}</div></div>
           </section> 
           
@@ -56,14 +55,14 @@ import Redux from "./SpanRedux.astro"
     <article id="proyectos">
       <h3 class="text-3xl" >Mis Proyectos</h3>
       <section>
-        <Proyecto text={pfText} image="pf.png" listTech={pfList} linkGitHub="https://github.com/GonzalMartin13/BFS-PFHenry"/>
+        <Proyecto text={pfText} image="pf.png" listTech={pfList} linkGitHub="https://github.com/GonzalMartin13/BFS-PFHenry" link="https://bfsonline.vercel.app/"/>
       </section>
   
       <section>
-        <Proyecto text={piText} image="pi.png" listTech={pfList.slice(0, -1)} linkGitHub="https://github.com/Abel-Leiva/Proyecto-Individual-Countries"/>
+        <Proyecto text={piText} image="pi.png" listTech={pfList.slice(0, -1)} linkGitHub="https://github.com/Abel-Leiva/Proyecto-Individual-Countries"link="https://pi-countries-nvll.onrender.com/"/>
       </section>
       <section>
-        <Proyecto text={jspJavaText} image="jspJava-min.png" listTech={javaProjectList} linkGitHub="https://github.com/Abel-Leiva/Primer-Proyecto-Java"/>
+        <Proyecto text={jspJavaText} image="jspJava-min.png" listTech={javaProjectList} linkGitHub="https://github.com/Abel-Leiva/Primer-Proyecto-Java" link="https://github.com/Abel-Leiva/Primer-Proyecto-Java"/>
       </section>
     </article>
   
@@ -79,4 +78,4 @@ article, section {
         align-items: center;}
     /* article, section{width: 85%; ; margin-bottom: 20px; display: flex; flex-direction: column; align-items: center;} */
 </style>
-  ./Form.jsx
+ 
