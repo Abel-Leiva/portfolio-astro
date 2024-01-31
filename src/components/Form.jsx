@@ -4,9 +4,10 @@ import Swal from "sweetalert2";
 import { useState } from "react";
 
 import Loader from "./Loader.jsx";
-const serviceId = "service_w1ivuru";
-const templateId = "template_x1urdpx";
-const publickey = "uDbWg3CSPOZhYDph2";
+const serviceId = import.meta.env.PUBLIC_SERVICEID;
+const templateId = import.meta.env.PUBLIC_TEMPLATEID;
+const publickey = import.meta.env.PUBLIC_KEY;
+
 const Form = () => {
   const [visibleSpiner, setVisibleSpiner] = useState(false);
   const [templateParams, setTemplateParams] = useState({
@@ -59,10 +60,7 @@ const Form = () => {
           </h2>
           <form onSubmit={submit} className="space-y-8">
             <div>
-              <label
-                for="email"
-                className="block mb-2 text-sm font-medium text-zinc-200 "
-              >
+              <label className="block mb-2 text-sm font-medium text-zinc-200 ">
                 Email
               </label>
               <input
@@ -77,10 +75,7 @@ const Form = () => {
               />
             </div>
             <div>
-              <label
-                for="subject"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >
+              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                 Nombre
               </label>
               <input
@@ -95,10 +90,7 @@ const Form = () => {
               />
             </div>
             <div className="sm:col-span-2">
-              <label
-                for="message"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
-              >
+              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
                 Mensaje
               </label>
               <textarea
