@@ -30,6 +30,23 @@ let javaProjectList=[Java,MySql,Css,Servlet,Git]
 import Redux from "./SpanRedux.astro"  
 ---
 <main class="text-center flex items-center text-slate-100 flex-col w-full container ">
+  <article class=" pb-7 scroll-margin-top" >
+    
+    
+    <div class="text-lg max-w-[820px] tracking-wide text-justify">
+
+      <p>Hola, soy Abel, un desarrollador web full stack. Mi interés por el desarrollo web surgió en el 2022, cuando tenía 34 años, y decidí aprender por mi cuenta a usar HTML y CSS. Me fascinó lo que podía hacer con solo unas líneas de código, y quise seguir aprendiendo más.</p>
+
+      <p>Así fue como me uní al bootcamp “Soy Henry”, donde aprendí a desarrollar aplicaciones web full stack, utilizando tecnologías como JavaScript, React, Node.js, Express, Postgres, y otras. Además, tuve la oportunidad de trabajar en equipo con otros desarrolladores, usando Git y GitHub como herramientas de colaboración. Pero no me conformé con eso, y también completé un curso de backend en la Universidad Nacional de Jujuy, donde amplié mis conocimientos técnicos con Java, Spring Boot, MySQL, y más.</p>
+      
+      <p>Me encanta enfrentarme a nuevos desafíos y crecer en cada proyecto que realizo. Algunos ejemplos de los sitios web que he creado son los siguientes:</p>
+      
+  
+      
+      
+    </div>
+      
+    </article>
    
     </article>
     <article id="proyectos">
@@ -45,44 +62,20 @@ import Redux from "./SpanRedux.astro"
         <Proyecto text={jspJavaText} image="jspJava-min.png" listTech={javaProjectList} linkGitHub="https://github.com/Abel-Leiva/Primer-Proyecto-Java" link="https://github.com/Abel-Leiva/Primer-Proyecto-Java"/>
       </section>
     </article>
-    <article class=" pb-7 scroll-margin-top" >
     
-    
-      <div class="text-lg max-w-[820px] tracking-wide text-justify">
-
-        <p >¡Hola! Soy Abel, un desarrollador web full stack.
-
-          Inicié mi viaje en la programación en 2022 a los 34 años, con una antigua pero resistente Pentium 4 y el pseudo lenguaje Raptor. No tarde nada en comprender que mi pasión por la programación superaba las limitaciones de hardware. Definitivamente queria dedicarme a esto.
-           Con el tiempo, pude invertir y mejorar mi setup. Y, Para tomar esto aún más seriamente, después de estudiar por mi cuenta HTML, CSS y algo de JavaScript, decidí ingresar al bootcamp "Soy Henry".
-          
-          En "Soy Henry", adquirí habilidades en JavaScript, React, Node.js, Express y Postgres. También realicé un curso de backend en la Universidad Nacional de Jujuy, donde incorporé Java, Spring Boot y MySQL a mi conjunto de habilidades técnicas.
-          
-          Siempre estoy en busca de nuevos desafíos y listo para crecer en cada proyecto. ¡Muchas gracias por visitar mi portfolio!
-          </p>
-        
-        
-        
-      </div>
-        
-        
-        
-        
-        
-        
-      </article>
   
       <article id="habilidades" class="scroll-margin-top"> 
         
         
           <section class="w-full text-lg mt-4 ">
-            <h3 class="text-3xl">Habilidades Tecnicas</h3>
+            <h3 class="text-3xl">Habilidades Técnicas</h3>
             <div class="border-b-2 w-full max-h-auto mt-2  md:text-left pb-2 flex flex-col md:flex-row justify-center items-center"><p class=""> Frontend: </p> <div class="flex ml-2 gap-2 flex-wrap  w-full">{listFront.map(Component=> <Component/>)}</div ></div>
             <div class="border-b-2 w-full max-h-auto min-h-14 text-center  md:text-left  mt-2 flex-col md:flex-row items-end pb-2 "><p class="  "> Backend:</p> <div class="flex flex-wrap  mt-2 w-full ml-2 gap-2">{listBack.map(Component=>
             <Component/>)}</div></div>
             <div class="border-b-2 w-full min-h-14 text-center  md:text-left flex flex-col md:flex-row items-center pb-2 ">  <p class="">Otras:</p><div class="flex mb-1 flex-wrap w-full gap-2 ml-2 ">{listOtros.map(Component=>
               <Component/>)}</div></div>
           </section> 
-   
+      </article>
   </main> 
 <style>
 
