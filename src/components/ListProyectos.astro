@@ -1,0 +1,109 @@
+---
+import Proyecto from "./Proyecto.astro";
+
+import Java from "./SpanJava.astro";
+import Servlet from "./SpanServlet.astro";
+
+import React from "./SpanReact.astro";
+import Node from "./SpanNode.astro";
+import Express from "./SpanExpress.astro";
+import Js from "./SpanJs.astro";
+import Css from "./SpanCss.astro";
+import Bootstrap from "./SpanBootstrap.astro";
+import Scrum from "./SpanScrum.astro";
+import Net from "./SpanNet.astro";
+import Tailwind from "./SpanTailwind.astro";
+import CSharp from "./SpanCSharp.astro";
+import Hibernate from "./SpanHibernate.astro";
+import SpringBoot from "./SpanSpringBoot.astro";
+import Postgres from "./SpanPostgre.astro";
+import MySql from "./SpanMySql.astro";
+import TypeScript from "./SpanTypeScript.astro";
+
+import Sequelize from "./SpanSequelize.astro";
+import Azure from "./SpanAzure.astro";
+import { dotnetText, geoText, pfText } from "./utilsTextProject";
+import { piText } from "./utilsTextProject";
+import { jspJavaText } from "./utilsTextProject";
+import Git from "./SpanGit.astro";
+let listBack = [
+  CSharp,
+  Net,
+  Node,
+  Express,
+  Sequelize,
+  Postgres,
+  Java,
+  SpringBoot,
+  Hibernate,
+  MySql,
+];
+let listFront = [Js, React, Css, Bootstrap, Tailwind];
+let listOtros = [Git];
+let pfList = [
+  Js,
+  React,
+
+  Node,
+  Express,
+  Postgres,
+  Sequelize,
+  Css,
+  Bootstrap,
+  Git,
+];
+let javaProjectList = [Java, MySql, Css, Git];
+let dotnetProjectList = [CSharp, Net, Azure];
+let geoTechList = [React, Tailwind, Css, TypeScript];
+---
+
+<div
+  class="scroll-proyectos space-y-8 h-[800px] overflow-y-auto overflow-x-hidden w-full p-10"
+>
+  <section>
+    <Proyecto
+      text={pfText}
+      image="pf.png"
+      listTech={pfList}
+      linkGitHub="https://github.com/GonzalMartin13/BFS-PFHenry"
+      link="https://bfsonline.vercel.app/"
+    />
+  </section>
+  <section>
+    <Proyecto
+      text={dotnetText}
+      image="dotnet1.png"
+      listTech={dotnetProjectList}
+      linkGitHub="https://github.com/Abel-Leiva/LoginAspNetMVC"
+      link="https://ejerciciologin.azurewebsites.net/"
+    />
+  </section>
+  <section>
+    <Proyecto
+      text={geoText}
+      image="mapsLeaflet.png"
+      listTech={geoTechList}
+      linkGitHub="https://github.com/Abel-Leiva/Geo-Front"
+      link="https://geo-front-tawny.vercel.app/"
+    />
+  </section>
+
+  <section>
+    <Proyecto
+      text={piText}
+      image="pi.png"
+      listTech={pfList.slice(0, -1)}
+      linkGitHub="https://github.com/Abel-Leiva/Proyecto-Individual-Countries"
+      link="https://pi-countries-nvll.onrender.com/"
+    />
+  </section>
+  <section>
+    <Proyecto
+      text={jspJavaText}
+      image="jspJava-min.png"
+      listTech={javaProjectList}
+      linkGitHub="https://github.com/Abel-Leiva/Primer-Proyecto-Java"
+      link="https://github.com/Abel-Leiva/Primer-Proyecto-Java"
+    />
+  </section>
+</div>

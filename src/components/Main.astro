@@ -1,90 +1,181 @@
 ---
+import Proyecto from "./Proyecto.astro";
 
-import Proyecto from "./Proyecto.astro"
+import Java from "./SpanJava.astro";
+import Servlet from "./SpanServlet.astro";
 
-import Java from "./SpanJava.astro"
-import Servlet from "./SpanServlet.astro"
-
-import React from './SpanReact.astro' 
-import Node from './SpanNode.astro' 
-import Express from "./SpanExpress.astro"
-import Js from "./SpanJs.astro"
-import Css from "./SpanCss.astro"
-import Bootstrap from "./SpanBootstrap.astro"
-import Scrum from "./SpanScrum.astro"
-
-import Hibernate from "./SpanHibernate.astro"
-import SpringBoot from "./SpanSpringBoot.astro"
-import Postgres from "./SpanPostgre.astro"
-import MySql from "./SpanMySql.astro"
-import Sequelize from "./SpanSequelize.astro"
-import {pfText} from "./utilsTextProject"
-import {piText} from "./utilsTextProject"
-import {jspJavaText} from "./utilsTextProject"
-import Git from "./SpanGit.astro"
-let listBack=[Node,Express,Sequelize,Postgres,Java,SpringBoot,Servlet,Hibernate,MySql]
-let listFront=[Js,React,Css,Redux,Bootstrap] 
-let listOtros=[Scrum,Git]
-let pfList=[Js,React,Express,Node,Express,Postgres,Sequelize,Css,Bootstrap,Git,Scrum]
-let javaProjectList=[Java,MySql,Css,Servlet,Git]
-import Redux from "./SpanRedux.astro"  
+import React from "./SpanReact.astro";
+import Node from "./SpanNode.astro";
+import Express from "./SpanExpress.astro";
+import Js from "./SpanJs.astro";
+import Css from "./SpanCss.astro";
+import Bootstrap from "./SpanBootstrap.astro";
+import Scrum from "./SpanScrum.astro";
+import Net from "./SpanNet.astro";
+import Tailwind from "./SpanTailwind.astro";
+import CSharp from "./SpanCSharp.astro";
+import Hibernate from "./SpanHibernate.astro";
+import SpringBoot from "./SpanSpringBoot.astro";
+import Postgres from "./SpanPostgre.astro";
+import MySql from "./SpanMySql.astro";
+import Sequelize from "./SpanSequelize.astro";
+import { pfText } from "./utilsTextProject";
+import { piText } from "./utilsTextProject";
+import { jspJavaText } from "./utilsTextProject";
+import Git from "./SpanGit.astro";
+import ListProyectos from "./ListProyectos.astro";
+import Azure from "./SpanAzure.astro";
+let listBack = [
+  CSharp,
+  Net,
+  Node,
+  Express,
+  Sequelize,
+  Postgres,
+  Java,
+  SpringBoot,
+  Hibernate,
+  MySql,
+];
+let listFront = [Js, React, Css, Bootstrap, Tailwind];
+let listOtros = [Git, Azure];
+let pfList = [
+  Js,
+  React,
+  Express,
+  Node,
+  Express,
+  Postgres,
+  Sequelize,
+  Css,
+  Bootstrap,
+  Git,
+];
+let javaProjectList = [Java, MySql, Css, Servlet, Git];
+let expanded = false;
 ---
-<main class="text-center flex items-center text-slate-100 flex-col w-full container ">
-  <article class=" pb-7 scroll-margin-top" >
-    
-    
-    <div class="text-lg max-w-[820px] tracking-wide text-justify">
 
-      <p>Hola, soy Abel, un desarrollador web full stack. Mi interés por el desarrollo web surgió en el 2022, cuando tenía 34 años, y decidí aprender por mi cuenta a usar HTML y CSS. Me fascinó lo que podía hacer con solo unas líneas de código, y quise seguir aprendiendo más.</p>
+<main
+  class="text-center flex items-center text-slate-100 flex-col w-full container"
+>
+  <article class="pb-7 scroll-margin-top">
+    <div
+      class="text-lg max-w-[820px] tracking-wide text-justify"
+      id="about-text"
+    >
+      <p>
+        Soy Abel Leiva, un amante de la programación que vive en Buenos Aires,
+        Argentina, y mi objetivo es convertirme en un programador profesional.
+      </p>
+      <p>
+        Llevo varios años formándome y los lenguajes que más domino son
+        JavaScript y TypeScript, tanto para backend como frontend. Desde hace un
+        tiempo vengo adquiriendo experiencia en C# y .NET, integrando Azure como
+        plataforma en la nube.
+      </p>
 
-      <p>Así fue como me uní al bootcamp “Soy Henry”, donde aprendí a desarrollar aplicaciones web full stack, utilizando tecnologías como JavaScript, React, Node.js, Express, Postgres, y otras. Además, tuve la oportunidad de trabajar en equipo con otros desarrolladores, usando Git y GitHub como herramientas de colaboración. Pero no me conformé con eso, y también completé un curso de backend en la Universidad Nacional de Jujuy, donde amplié mis conocimientos técnicos con Java, Spring Boot, MySQL, y más.</p>
-      
-      <p>Me encanta enfrentarme a nuevos desafíos y crecer en cada proyecto que realizo. Algunos ejemplos de los sitios web que he creado son los siguientes:</p>
-      
-  
-      
-      
+      <div id="extra-text" class="hidden">
+        <p>
+          Realicé un bootcamp de un año y un curso de programación en Java de
+          ocho meses. Además, hice una pasantía como desarrollador backend en
+          una startup que desarrolla soluciones con IA para la industria médica,
+          experiencia que me permitió aprender a trabajar en equipo, adaptarme a
+          metodologías ágiles, manejar control de versiones con Git y colaborar
+          en entornos de desarrollo profesional.
+        </p>
+        <p>
+          Me destaco por ser una persona curiosa en todo lo relacionado con
+          tecnología y siempre estoy aprendiendo cosas nuevas.
+        </p>
+        <p>
+          Busco un puesto donde pueda crecer y demostrar todo lo que soy capaz
+          de lograr.
+        </p>
+      </div>
+
+      <button
+        id="toggle-btn"
+        class="text-lime-800 hover:text-lime-500 font-semibold mt-2"
+        type="button"
+      >
+        ...Ver más
+      </button>
     </div>
-      
-    </article>
-   
-    </article>
-    <article id="proyectos">
-      <h3 class="text-3xl mb-4 -" >Estos son algunos de mis Proyectos</h3>
-      <section>
-        <Proyecto text={pfText} image="pf.png" listTech={pfList} linkGitHub="https://github.com/GonzalMartin13/BFS-PFHenry" link="https://bfsonline.vercel.app/"/>
-      </section>
-  
-      <section>
-        <Proyecto text={piText} image="pi.png" listTech={pfList.slice(0, -1)} linkGitHub="https://github.com/Abel-Leiva/Proyecto-Individual-Countries"link="https://pi-countries-nvll.onrender.com/"/>
-      </section>
-      <section>
-        <Proyecto text={jspJavaText} image="jspJava-min.png" listTech={javaProjectList} linkGitHub="https://github.com/Abel-Leiva/Primer-Proyecto-Java" link="https://github.com/Abel-Leiva/Primer-Proyecto-Java"/>
-      </section>
-    </article>
-    
-  
-      <article id="habilidades" class="scroll-margin-top"> 
-        
-        
-          <section class="w-full text-lg mt-4 " >
-            <h3 class="text-3xl">Habilidades Técnicas</h3>
-            <div class="border-b-2 w-full max-h-auto mt-2  md:text-left pb-2 flex flex-col md:flex-row justify-center items-center"><p class=""> Frontend: </p> <div class="flex ml-2 gap-2 flex-wrap  w-full">{listFront.map(Component=> <Component/>)}</div ></div>
-            <div class="border-b-2 w-full max-h-auto min-h-14 text-center  md:text-left  mt-2 flex-col md:flex-row items-end pb-2 "><p class="  "> Backend:</p> <div class="flex flex-wrap  mt-2 w-full ml-2 gap-2">{listBack.map(Component=>
-            <Component/>)}</div></div>
-            <div class="border-b-2 w-full min-h-14 text-center  md:text-left flex flex-col md:flex-row items-center pb-2 ">  <p class="">Otras:</p><div class="flex mb-1 flex-wrap w-full gap-2 ml-2 ">{listOtros.map(Component=>
-              <Component/>)}</div></div>
-          </section> 
-      </article>
-  </main> 
-<style>
+  </article>
 
-article, section {
-        width: 85%;
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;}
-   
+  <article id="experiencia" class="scroll-margin-top">
+    <h3 class="text-3xl mb-4 text-slate-100 border-b-2 border-b-lime-800">
+      Experiencia Laboral
+    </h3>
+    <div
+      class="text-lg max-w-[820px] tracking-wide text-justify text-slate-100 divExperiencias"
+    >
+      <p>
+        <strong>AIMedic (pasantía):</strong>
+        Desarrollé backend utilizando NestJS, GraphQL y MongoDB. En el transcurso
+        de un mes, aprendí a manejar estas tecnologías y desarrollé funcionalidades
+        como login y APIs.
+      </p>
+    </div>
+  </article>
+</main>
+<article id="proyectos" class="mt-11">
+  <h3 class="text-3xl mb-4 text-slate-100">
+    Estos son algunos de mis Proyectos
+  </h3>
+
+  <ListProyectos />
+</article>
+
+<article id="habilidades" class="scroll-margin-top">
+  <section class="w-full text-lg mt-4 text-slate-100">
+    <h3 class="text-3xl">Habilidades Técnicas</h3>
+    <div
+      class="border-b-2 w-full max-h-auto mt-2 md:text-left pb-2 flex flex-col md:flex-row justify-center items-center"
+    >
+      <p class="">Frontend:</p>
+      <div class="flex ml-2 gap-2 flex-wrap w-full">
+        {listFront.map((Component) => <Component />)}
+      </div>
+    </div>
+    <div
+      class="border-b-2 w-full max-h-auto min-h-14 text-center md:text-left mt-2 flex-col md:flex-row items-end pb-2"
+    >
+      <p class="">Backend:</p>
+      <div class="flex flex-wrap mt-2 w-full ml-2 gap-2">
+        {listBack.map((Component) => <Component />)}
+      </div>
+    </div>
+    <div
+      class="border-b-2 w-full min-h-14 text-center md:text-left flex flex-col md:flex-row items-center pb-2"
+    >
+      <p class="">Otras:</p><div class="flex mb-1 flex-wrap w-full gap-2 ml-2">
+        {listOtros.map((Component) => <Component />)}
+      </div>
+    </div>
+  </section>
+</article>
+<script is:inline>
+  const btn = document.getElementById("toggle-btn");
+  const extraText = document.getElementById("extra-text");
+
+  btn.addEventListener("click", () => {
+    if (extraText.classList.contains("hidden")) {
+      extraText.classList.remove("hidden");
+      btn.textContent = "Ver menos";
+    } else {
+      extraText.classList.add("hidden");
+      btn.textContent = "Ver más";
+    }
+  });
+</script>
+<style>
+  article,
+  section {
+    width: 85%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 </style>
- 
